@@ -1,0 +1,32 @@
+syntax = "proto3";
+option go_package = "github.com/plenahan/dummysports/wager";
+
+message Amount {
+    int64 amount = 1;
+    string currency = 2;
+}
+
+message Bet {
+    double line = 1;
+    string title = 2;
+}
+
+message User {
+    string name = 1;
+    string email = 2;
+}
+
+message CreateRequest {
+    Amount amount = 1;
+    Bet bet = 2;
+    User user = 3;
+}
+
+message CreateResponse {
+    bool win = 1;
+    int64 payout = 2;
+}
+
+service Invoicer {
+    rpc Create(CreateRequest) returns (CreateResponse);
+}
