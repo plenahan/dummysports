@@ -2,7 +2,7 @@ syntax = "proto3";
 option go_package = "github.com/plenahan/dummysports/wager";
 
 message Amount {
-    int64 amount = 1;
+    double amount = 1;
     string currency = 2;
 }
 
@@ -27,6 +27,6 @@ message CreateResponse {
     int64 payout = 2;
 }
 
-service Invoicer {
+service Wager {
     rpc Create(CreateRequest) returns (CreateResponse);
 }
