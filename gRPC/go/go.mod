@@ -1,4 +1,4 @@
-module dummysports/service
+module dummysports/gRPC/service
 
 go 1.22.5
 
