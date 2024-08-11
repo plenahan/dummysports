@@ -1,4 +1,5 @@
 syntax = "proto3";
+option go_package = "dummysports/service";
 
 service DummyService {
   rpc CreateGroup(Grouping) returns (Group) {} // will need a way to add to a group.
