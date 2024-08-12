@@ -1,4 +1,6 @@
 syntax = "proto3";
+package dummyservice;
+
 option go_package = "dummysports/service";
 
 service DummyService {
