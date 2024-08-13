@@ -1,6 +1,8 @@
 syntax = "proto3";
 package dummyservice;
 
+option java_package = "dummysports/service";
+option java_multiple_files = true;
 option go_package = "dummysports/service";
 
 service DummyService {
